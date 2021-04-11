@@ -1,0 +1,26 @@
+{
+  "name": "SBI証券 電子交付書面ダウンローダー",
+  "description": "",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "downloads",
+    "contextMenus",
+    "https://sbisec.postub.mypot.jp/web/*"
+  ],
+  "content_scripts": [{
+    "matches": [
+      "https://sbisec.postub.mypot.jp/web/*"
+    ],
+    "js": ["content_script.js"]
+  }],
+  "icons" : {
+    "16" : "icon16.png",
+    "32" : "icon32.png"
+  }
+}
